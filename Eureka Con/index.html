@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eureka Con | Universal Sovereign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans+Arabic:wght@100;400;700;900&display=swap');
+        
+        body {
+            background-color: #000000;
+            color: #f1f5f9;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Space Grotesk', 'Noto Sans Arabic', system-ui, sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+        .rtl {
+            direction: rtl;
+        }
+        @keyframes pulse-cyan {
+            0%, 100% { opacity: 0.5; box-shadow: 0 0 20px #06b6d4; }
+            50% { opacity: 1; box-shadow: 0 0 60px #22d3ee; }
+        }
+        .aura-cyan {
+            animation: pulse-cyan 3s infinite ease-in-out;
+        }
+        @keyframes quantum-drift {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.1; }
+            50% { transform: translateY(-20px) scale(1.05); opacity: 0.2; }
+        }
+        .quantum-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.1) 0%, rgba(139, 92, 246, 0.05) 50%, transparent 100%);
+            animation: quantum-drift 8s infinite ease-in-out;
+        }
+        .gradient-text-quantum {
+            background: linear-gradient(135deg, #22d3ee 0%, #a855f7 50%, #db2777 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text-gold {
+            background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 50%, #b45309 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cosmic-panel {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(32px);
+            border: 1px solid rgba(6, 182, 212, 0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        @keyframes warp-speed {
+            0% { transform: translateX(-100%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(100%); opacity: 0; }
+        }
+        .animate-warp {
+            animation: warp-speed 0.8s infinite linear;
+        }
+        .grid-lines {
+            background-image: linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root" class="grid-lines"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
